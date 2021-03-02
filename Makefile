@@ -6,4 +6,4 @@ run: $(MAIN_FILE)
 	$(MAIN_FILE)
 
 ./main: $(SOURCE_FILES)
-	crystal build --no-debug -p ./main.cr
+	crystal build --release --no-debug --progress ./main.cr
