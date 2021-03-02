@@ -1,4 +1,7 @@
-# Installed dependecies
+# crystal binaries
+/main
+
+# installed dependecies
 /lib/exception_page/
 /lib/kemal/
 /lib/kilt/
