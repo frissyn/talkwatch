@@ -1,3 +1,8 @@
-require "./talkwatch/webview"
-require "./talkwatch/moderator"
-require "./talkwatch/structures"
+require "uri"
+require "json"
+require "http"
+require "./talkwatch/*"
+
+module TalkWatch
+    VERSION = "0.1a"
+end
