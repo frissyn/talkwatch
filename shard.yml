@@ -8,7 +8,7 @@ authors:
     - frissyn
 
 description: |
-    Short description of talkwatch
+    Simple and extensive automodder for ReplTalk with webview logs.
 
 dependencies:
     kemal:
