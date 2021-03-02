@@ -1,11 +1,11 @@
 require "kemal"
-require "./lib/talkwatch"
+require "talkwatch"
 
 sid = ENV["connect.sid"]
 
 moderator = TalkWatch::Moderator.new(sid)
-info = moderator.authenticate
+user = moderator.authenticate
 
-pp info
+puts "Running with user context: '#{user}'"
 
 Kemal.run
