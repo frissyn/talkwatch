@@ -1,5 +1,6 @@
-# crystal binaries
+# crystal gens
 /main
+/shard.lock
 
 # installed dependecies
 /lib/exception_page/
