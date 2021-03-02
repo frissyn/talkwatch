@@ -1,0 +1,11 @@
+# Installed dependecies
+/lib/exception_page/
+/lib/kemal/
+/lib/kilt/
+/lib/radix/
+
+# enviornment stuff
+.env
+.venv
+/env/
+/venv/
