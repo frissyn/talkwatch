@@ -1,0 +1,15 @@
+name: talkwatch
+version: 0.1a
+
+crystal: 0.35.1
+license: MIT
+
+authors:
+    - frissyn
+
+description: |
+    Short description of talkwatch
+
+dependencies:
+    kemal:
+        github: kemalcr/kemal
