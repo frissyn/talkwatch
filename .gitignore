@@ -13,3 +13,6 @@
 .venv
 /env/
 /venv/
+
+# HTML layouts
+/views/*.html
