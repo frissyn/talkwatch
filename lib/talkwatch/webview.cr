@@ -1,6 +1,8 @@
 require "kemal"
 
 module TalkWatch
+    extend self
+    
     module Webview
         get "/" do
             render "views/index.ecr"
