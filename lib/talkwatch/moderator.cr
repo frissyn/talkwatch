@@ -28,12 +28,13 @@ module TalkWatch
             hash.delete("editor_preferences")
             hash.delete("email_notifications")
 
-            @user = User.from_json(hash.to_json)
-            @user
+            @user = Objects::User.from_json(hash.to_json)
+
+            return @user
         end
 
         def user
-            @user
+            return @user
         end
     end
 end
