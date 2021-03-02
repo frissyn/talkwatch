@@ -11,6 +11,5 @@ module TalkWatch
         end
 
         Kemal.config.port = 8080
-        Kemal.run
     end
 end
