@@ -1,9 +1,6 @@
-require "uri"
-require "json"
-require "http"
-
 require "./talkwatch/*"
 require "./talkwatch/objects/*"
+require "./talkwatch/graphql/*"
 
 module TalkWatch
     VERSION = "0.1a"
