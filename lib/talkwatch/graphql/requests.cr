@@ -2,7 +2,7 @@ module TalkWatch
     extend self
 
     module GraphQL
-        class Field
+        def make_request()
         end
     end
 end
