@@ -1,5 +1,5 @@
 # hidden for safety
-/lib/talkwatch/graphql/values.cr
+lib/talkwatch/graphql/values.cr
 
 # crystal gens
 /main
