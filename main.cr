@@ -4,8 +4,7 @@ require "talkwatch"
 sid = ENV["connect.sid"]
 
 moderator = TalkWatch::Moderator.new(sid)
-user = moderator.authenticate
 
-puts "Running with user context: '#{user}'"
+puts "Running with user context: '#{moderator.user.username}'"
 
 Kemal.run
