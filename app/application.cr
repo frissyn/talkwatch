@@ -1,12 +1,12 @@
 require "kemal"
 require "./controllers/*"
+
 require "./talkwatch/*"
 require "./talkwatch/objects/*"
 
-sid = ENV["connect.sid"]
-bot = Talkwatch::Bot(sid)
+SID = ENV["connect.sid"]
+bot = Talkwatch::Bot.new(SID)
 
-log "User Context: #{bot.user.username}"
+puts "User Context: #{bot.user.username}"
 
 Kemal.run
-

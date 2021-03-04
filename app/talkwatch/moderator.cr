@@ -2,6 +2,8 @@ require "json"
 require "http"
 
 module Talkwatch
+    extend self
+    
     class Bot
         getter client : HTTP::Client
         getter user : Objects::User
