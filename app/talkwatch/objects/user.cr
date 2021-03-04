@@ -1,6 +1,6 @@
 require "json"
 
-module Application
+module Talkwatch
     extend self
 
     module Objects
