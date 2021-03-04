@@ -1,0 +1,35 @@
+:root {
+    --dark1: #121212;
+    --dark2: #262626;
+    --dark3: #393939;
+
+    --light1: #CECECE;
+    --light2: #E1E1E1;
+    --light3: #F5F5F5;
+
+    --accent1: #6363E0;
+    --accent2: #8484E6;
+    --accent3: #A5A5ED;
+}
+
+.dark-1.txt { color: var(--dark1) }
+.dark-2.txt { color: var(--dark2) }
+.dark-3.txt { color: var(--dark3) }
+.dark-1.bg { background-color: var(--dark1) }
+.dark-2.bg { background-color: var(--dark2) }
+.dark-3.bg { background-color: var(--dark3) }
+
+
+.light-1.txt { color: var(--light1) }
+.light-2.txt { color: var(--light2) }
+.light-3.txt { color: var(--light3) }
+.light-1.bg { background-color: var(--light1) }
+.light-2.bg { background-color: var(--light2) }
+.light-3.bg { background-color: var(--light3) }
+
+.accent-1.txt { color: var(--accent1) }
+.accent-2.txt { color: var(--accent2) }
+.accent-3.txt { color: var(--accent3) }
+.accent-1.bg { background-color: var(--accent1) }
+.accent-2.bg { background-color: var(--accent2) }
+.accent-3.bg { background-color: var(--accent3) }
