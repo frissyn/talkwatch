@@ -1,15 +1,14 @@
 name: talkwatch
 version: 0.1a
 
-crystal: 0.35.1
-license: MIT
-
 authors:
-    - frissyn
+   - frissyn
 
 description: |
-    Simple and extensive automodder for ReplTalk with webview logs.
+    Simple and extensive automoderator for ReplTalk.
 
 dependencies:
     kemal:
         github: kemalcr/kemal
+
+license: null

@@ -1,0 +1,16 @@
+body {
+    min-height: 100vh;
+    background-color: var(--dark1);
+    text-rendering: optimizeLegibility;
+    font-family: 'Segoe UI', 'Roboto', 'Oxygen', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 10px;
+    color: var(--light3);
+}
+
+p {
+    margin-bottom: 4px;
+    color: var(--light2);
+}

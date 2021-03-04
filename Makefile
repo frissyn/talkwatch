@@ -1,9 +1,9 @@
-export MAIN_FILE = ./main
-export SOURCE_FILES = $(shell find)
+export RUN_FILE = ./application
+export SOURCE_FILES = $(shell find **/*)
 
 .PHONY: run
-run: $(MAIN_FILE)
-	$(MAIN_FILE)
+run: $(RUN_FILE)
+	$(RUN_FILE)
 
-./main: $(SOURCE_FILES)
-	crystal build --no-debug --progress ./main.cr
+./application: $(SOURCE_FILES)
+	crystal build --no-debug --progress ./app/application.cr

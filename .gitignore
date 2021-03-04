@@ -1,21 +1,7 @@
-# hidden for safety
-/lib/talkwatch/graphql/values.cr
-
-# crystal gens
-/main
-/shard.lock
-
-# installed dependecies
-/lib/exception_page/
-/lib/kemal/
-/lib/kilt/
-/lib/radix/
-
-# enviornment stuff
-.env
-.venv
-/env/
-/venv/
-
-# HTML layouts
-/views/*.html
+/docs/
+/lib/
+/bin/
+/.shards/
+*.dwarf
+shard.lock
+/application
