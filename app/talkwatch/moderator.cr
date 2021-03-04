@@ -34,15 +34,19 @@ module Talkwatch
         end
 
         def gql(name : String, op : String, vars : Hash(String, String))
-            load = {
-                "operationName" => name,
-                "query" => op,
-                "variables" => variables.to_json
-            }
+            headers = @headers
+            headers["Content-Type"] = "application/json"
+            load = {"operationName" => name, "query" => op, "variables" => vars.to_json}
 
-            res = @client.post("/graphql", @headers, form=load)
+            res = @client.post("/graphql", @headers, form=load.to_json)
 
-            res
+            begin content = JSON.parse(res.body)
+            rescue
+                puts "\e[31mERROR\n#{res.body}\e[0m"
+                return nil
+            end
+            
+            content.as_h["data"].as_h
         end
     end
 end
