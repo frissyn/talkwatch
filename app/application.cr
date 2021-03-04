@@ -1,5 +1,6 @@
 require "kemal"
-require "./talkwatch/*"
 require "./controllers/*"
+require "./talkwatch/*"
+require "./talkwatch/objects/*"
 
 Kemal.run
