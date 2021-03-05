@@ -1,5 +1,6 @@
 name: talkwatch
 version: 0.1a
+crystal: 0.35.1
 
 authors:
    - frissyn
