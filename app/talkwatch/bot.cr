@@ -6,7 +6,7 @@ module Talkwatch
     
     class Bot
         getter client : HTTP::Client
-        getter user : Objects::User
+        getter user : Objects::BotUser
 
         property sid : String
         property headers : HTTP::Headers
@@ -30,10 +30,10 @@ module Talkwatch
             hash.delete("editor_preferences")
             hash.delete("email_notifications")
 
-            @user = Objects::User.from_json(hash.to_json)
+            @user = Objects::BotUser.from_json(hash.to_json)
         end
 
-        private def gql(name : String, op : String, vars : Hash)
+        def gql(name : String, op : String, vars : Hash)
             headers = @headers
             headers["Content-Type"] = "application/json"
             load = {

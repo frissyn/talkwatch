@@ -42,9 +42,9 @@ module Talkwatch
             getter karma : Int64
             getter isHacker : Bool
             getter timeCreated : String
-            getter roles : Array(Role?)
-            getter organization : Hash?
-            getter languages : Array(Language?)
+            getter roles : Array(Role)
+            getter organization : Hash(String, JSON::Any)
+            getter languages : Array(Language)
         end
     end
 end
