@@ -9,7 +9,7 @@ module Talkwatch
 
             getter user : User?
 
-            getter id : String
+            getter id : Int64
             getter timeCreated : String
             getter title : String
             getter preview : String
@@ -24,6 +24,7 @@ module Talkwatch
             getter voteCount : Int16
             getter canVote : Bool
             getter hasVoted : Bool
+            getter user : User?
             getter repl : Repl?
             getter board : Board?
 

@@ -11,13 +11,13 @@ module Talkwatch
             getter url : String
 
             @[JSON::Field(key: "id")]
-            getter id : Int64
+            getter id : Int16
         end
 
         class Role
             include JSON::Serializable
 
-            getter id : String
+            getter id : Int16
             getter name : String
             getter tagline : String?
 
@@ -49,13 +49,22 @@ module Talkwatch
         class Repl
             include JSON::Serializable
 
-            getter id : String
+            getter id : Int16
             getter url : String
             getter description : String?
             getter isPrivate : Bool
             getter isAlwaysOn : Bool
             getter lang : Language
             
+            property __typename : String
+        end
+
+        class Organization
+            include JSON::Serializable
+
+            getter id : Int16
+            getter name : String
+
             property __typename : String
         end
     end
