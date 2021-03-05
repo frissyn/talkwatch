@@ -33,10 +33,14 @@ module Talkwatch
             @user = Objects::User.from_json(hash.to_json)
         end
 
-        def gql(name : String, op : String, vars : Hash(String, String))
+        private def gql(name : String, op : String, vars : Hash)
             headers = @headers
             headers["Content-Type"] = "application/json"
-            load = {"operationName" => name, "query" => op, "variables" => vars.to_json}
+            load = {
+                "operationName" => name,
+                "query" => op,
+                "variables" => vars.to_json
+            }
 
             res = @client.post("/graphql", @headers, form=load.to_json)
 
@@ -47,6 +51,10 @@ module Talkwatch
             end
             
             content.as_h["data"].as_h
+        end
+
+        def get_posts(options : Hash)
+            gql("PostsFeed", Queries.posts, options)
         end
     end
 end

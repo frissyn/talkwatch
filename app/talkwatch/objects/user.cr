@@ -14,12 +14,12 @@ module Talkwatch
             getter id : Int64
         end
 
-        class User
+        class BotUser
             include JSON::Serializable
 
+            getter id : Int64
             getter username : String
             getter email : String
-            getter id : Int64
             getter first_name : String
             getter last_name : String
             getter organization_id : Int64
@@ -29,6 +29,22 @@ module Talkwatch
             getter bio : String
             getter is_verified : Bool
             getter is_over_limit : Bool
+        end
+
+        class User
+            include JSON::Serializable
+
+            getter id : Int64
+            getter fullName : String
+            getter username : String
+            getter image : String
+            getter bio : String?
+            getter karma : Int64
+            getter isHacker : Bool
+            getter timeCreated : String
+            getter roles : Array(Role?)
+            getter organization : Hash?
+            getter languages : Array(Language?)
         end
     end
 end
