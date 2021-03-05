@@ -9,19 +9,6 @@ bot = Talkwatch::Bot.new(SID)
 
 puts "User Context: #{bot.user.username}"
 
-res = bot.gql(
-    "PostsFeed",
-    Talkwatch::Queries.posts,
-    {
-        "order" => "new",
-        "count" => 30,
-        "after" => nil,
-        "boardSlugs" => ["all"],
-        "searchQuery" => nil,
-        "languages" => nil
-    }
-)
-
-File.write("res.json", res.to_json)
+puts typeof(bot.get_posts({"count" => 1}))
 
 Kemal.run

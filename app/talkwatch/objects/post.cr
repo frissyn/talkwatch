@@ -7,8 +7,6 @@ module Talkwatch
         class Post
             include JSON::Serializable
 
-            getter user : User?
-
             getter id : Int64
             getter timeCreated : String
             getter title : String

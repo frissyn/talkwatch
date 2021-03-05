@@ -47,14 +47,29 @@ module Talkwatch
             begin content = JSON.parse(res.body)
             rescue
                 puts "\e[31mERROR\n#{res.body}\e[0m"
-                return nil
+                return {} of String => Nil
             end
             
             content.as_h["data"].as_h
         end
 
         def get_posts(options : Hash)
-            gql("PostsFeed", Queries.posts, options)
+            res = gql(
+                "PostsFeed",
+                Queries.posts,
+                {
+                    "order" => "new",
+                    "count" => 30,
+                    "after" => nil,
+                    "boardSlugs" => ["all"],
+                    "searchQuery" => nil,
+                    "languages" => nil
+                }.merge(options)
+            )
+
+            res = JSON.parse(res.to_json)
+
+            res["posts"]["items"]
         end
     end
 end
