@@ -1,8 +1,6 @@
 require "kemal"
+require "./talkwatch"
 require "./controllers/*"
-
-require "./talkwatch/*"
-require "./talkwatch/objects/*"
 
 SID = ENV["connect.sid"]
 bot = Talkwatch::Bot.new(SID)
