@@ -1,10 +1,21 @@
+# standard Crystal ignores
 /docs/
 /lib/
 /bin/
 /.shards/
 *.dwarf
 shard.lock
+
+# main binary file
 /application
+
+# enviornment stuff
 .env
 /env/
+
+# database stuff
+/db/
+listens.yml
+
+# hidden for security
 /app/talkwatch/queries.cr
