@@ -17,7 +17,7 @@ module Talkwatch
         class Role
             include JSON::Serializable
 
-            getter id : Int16
+            getter id : String
             getter name : String
             getter tagline : String?
 
@@ -37,7 +37,7 @@ module Talkwatch
         class Language
             include JSON::Serializable
             
-            getter id : Int16
+            getter id : String
             getter icon : String
             getter key : String
             getter displayName : String
@@ -49,7 +49,7 @@ module Talkwatch
         class Repl
             include JSON::Serializable
 
-            getter id : Int16
+            getter id : String
             getter url : String
             getter description : String?
             getter isPrivate : Bool
@@ -62,7 +62,7 @@ module Talkwatch
         class Organization
             include JSON::Serializable
 
-            getter id : Int16
+            getter id : String
             getter name : String
 
             property __typename : String

@@ -67,9 +67,32 @@ module Talkwatch
                 }.merge(options)
             )
 
-            res = JSON.parse(res.to_json)
+            JSON.parse(res.to_json)["posts"]["items"].as_a
+        end
 
-            res["posts"]["items"]
+        def get_post(options : Hash)
+            res = gql(
+                "post",
+                Queries.postByID,
+                {"id" => nil}.merge(options)
+            )
+
+            JSON.parse(res.to_json)["data"]["post"].as_h
+        end
+
+        def get_post_comments(options : Hash)
+            res = gql(
+                "post",
+                Queries.postComments,
+                {
+                    "postId" => nil,
+                    "order" => "new",
+                    "count" => nil,
+                    "after" => nil
+                }.merge(options)
+            )
+
+            JSON.parse(res.to_json)["post"]["comments"]["items"].as_a
         end
     end
 end

@@ -27,6 +27,10 @@ module Talkwatch
             getter board : Board?
 
             property __typename : String
+
+            def get_comments(client : BotUser)
+                
+            end
         end
     end
 end

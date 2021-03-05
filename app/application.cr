@@ -9,6 +9,4 @@ bot = Talkwatch::Bot.new(SID)
 
 puts "User Context: #{bot.user.username}"
 
-puts typeof(bot.get_posts({"count" => 1}))
-
 Kemal.run
